@@ -1,7 +1,7 @@
 ## Download latest snapshot (using the example of Stargaze)  
 Stop Stargaze service  
 ```
-systemctl stop panacead.service
+systemctl stop starsd.service
 ```  
 
 Remove old data in directory `~/.starsd/data`  
