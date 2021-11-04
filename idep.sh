@@ -10,12 +10,10 @@ OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 
 
 now_date() {
-    echo -n $(TZ=":Europe/Moscow" date '+%Y-%m-%d_%H:%M:%S')
+    echo -n $(date +%F-%H-%M-%S)
 }
 
 log_this() {
-    YEL='\033[1;33m' # yellow
-    NC='\033[0m'     # No Color
     local logging="$@"
     printf "|$(now_date)| $logging\n" | sudo tee -a ${LOG_PATH}
 }

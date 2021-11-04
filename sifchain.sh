@@ -10,12 +10,10 @@ OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 
 
 now_date() {
-    echo -n $(TZ=":Europe/Moscow" date '+%Y-%m-%d_%H:%M:%S')
+    echo -n $(date +%F-%H-%M-%S)
 }
 
 log_this() {
-    YEL='\033[1;33m' # yellow
-    NC='\033[0m'     # No Color
     local logging="$@"
     printf "|$(now_date)| $logging\n" | sudo tee -a ${LOG_PATH}
 }
@@ -29,7 +27,7 @@ log_this "Stopping ${SERVICE_NAME}"
 sudo systemctl stop ${SERVICE_NAME}; echo $? >> ${LOG_PATH}
 
 log_this "Creating new snapshot"
-time tar cf ${HOME}/${SNAP_NAME} -C ${DATA_PATH} . &>>${LOG_PATH}
+time sudo tar cf ${HOME}/${SNAP_NAME} -C ${DATA_PATH} . &>>${LOG_PATH}
 
 log_this "Starting ${SERVICE_NAME}"
 sudo systemctl start ${SERVICE_NAME}; echo $? >> ${LOG_PATH}
