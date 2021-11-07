@@ -1,10 +1,10 @@
 #!/bin/bash
-CHAIN_ID="stargaze-1"
-SNAP_PATH="$HOME/nginx/cosmos-snapshots/stargaze/"
-LOG_PATH="$HOME/nginx/cosmos-snapshots/stargaze/stargaze_log.txt"
-DATA_PATH="$HOME/.starsd/data/"
-SERVICE_NAME="starsd.service"
-RPC_ADDRESS="http://127.0.0.1:46657"
+CHAIN_ID="comets-test"
+SNAP_PATH="$HOME/nginx/cosmos-snapshots/comdex/"
+LOG_PATH="$HOME/nginx/cosmos-snapshots/comdex/comdex_log.txt"
+DATA_PATH="$HOME/.comdex/data/"
+SERVICE_NAME="comdex.service"
+RPC_ADDRESS="http://127.0.0.1:57657"
 SNAP_NAME=$(echo "${CHAIN_ID}_$(date '+%Y-%m-%d').tar")
 OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 
