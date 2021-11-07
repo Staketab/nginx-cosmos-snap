@@ -8,7 +8,6 @@ RPC_ADDRESS="http://127.0.0.1:26666"
 SNAP_NAME=$(echo "${CHAIN_ID}_$(date '+%Y-%m-%d').tar")
 OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 
-
 now_date() {
     echo -n $(date +%F-%H-%M-%S)
 }
@@ -38,7 +37,6 @@ sudo rm -fv ${OLD_SNAP} &>>${LOG_PATH}
 
 log_this "Moving new snapshot to ${SNAP_PATH}"
 sudo mv ${HOME}/${CHAIN_ID}*tar ${SNAP_PATH} &>>${LOG_PATH}
-
 
 du -hs ${SNAP_PATH} | sudo tee -a ${LOG_PATH}
 
