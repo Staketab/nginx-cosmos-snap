@@ -20,6 +20,7 @@ log_this() {
 LAST_BLOCK_HEIGHT=$(curl -s ${RPC_ADDRESS}/status | jq -r .result.sync_info.latest_block_height)
 sudo touch ${LOG_PATH}
 sudo chmod 777 ${LOG_PATH}
+log_this "CHAIN-ID ${CHAIN_ID}"
 log_this "LAST_BLOCK_HEIGHT ${LAST_BLOCK_HEIGHT}"
 
 log_this "Stopping ${SERVICE_NAME}"
