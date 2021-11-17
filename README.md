@@ -27,6 +27,6 @@ How to download:
 [Sifchain snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/sifchain.md)  
 [IDEP snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/idep.md)  
 [Comdex snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/comdex.md)  
-[Kichain snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/kichain.md)  
+[Kichain snapshot instruction](kichain.md)  
 
 ## DONE
