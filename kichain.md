@@ -13,8 +13,8 @@ cd /srv/ki/kid/data
 
 Download snapshot  
 ```bash
-SNAP_NAME=$(curl -s http://mercury-nodes.net/kichain-snaps/ | egrep -o ">kichain-2.*tar" | tr -d ">"); \
-wget -O - http://mercury-nodes.net/kichain-snaps/${SNAP_NAME} | tar xf -
+SNAP_NAME=$(curl -s https://mercury-nodes.net/kichain-snaps/ | egrep -o ">kichain-2.*tar" | tr -d ">"); \
+wget -O - https://mercury-nodes.net/kichain-snaps/${SNAP_NAME} | tar xf -
 ```
 
 Start service and check logs  
