@@ -11,7 +11,7 @@ http://cosmos-snap.staketab.com/ - Main page os snapshots.
 http://cosmos-snap.staketab.com/ixo - IXO (Mainnet)  
 http://cosmos-snap.staketab.com/medibloc - Medibloc (Mainnet)  
 http://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
-http://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
+http://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet) 
 
 ### - TESTNET
 http://cosmos-snap.staketab.com/idep - Idep (Testnet)  
@@ -27,5 +27,6 @@ How to download:
 [Sifchain snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/sifchain.md)  
 [IDEP snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/idep.md)  
 [Comdex snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/comdex.md)  
+[Kichain snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/kichain.md)  
 
 ## DONE
