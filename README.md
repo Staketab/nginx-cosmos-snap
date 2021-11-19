@@ -8,15 +8,15 @@ Updated once a day.
 http://cosmos-snap.staketab.com/ - Main page os snapshots.  
 
 ### - MAINNET
-http://cosmos-snap.staketab.com/ixo - IXO (Mainnet)
-http://cosmos-snap.staketab.com/medibloc - Medibloc (Mainnet) 
-http://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet) 
-http://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)
-https://mercury-nodes.net/kichain-snaps/) - Kichain (Mainnet)
+http://cosmos-snap.staketab.com/ixo - IXO (Mainnet)  
+http://cosmos-snap.staketab.com/medibloc - Medibloc (Mainnet)  
+http://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
+http://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
+https://mercury-nodes.net/kichain-snaps/ - Kichain (Mainnet)  
 
 ### - TESTNET
-http://cosmos-snap.staketab.com/idep - Idep (Testnet)
-http://cosmos-snap.staketab.com/comdex - Comdex (Testnet)
+http://cosmos-snap.staketab.com/idep - Idep (Testnet)  
+http://cosmos-snap.staketab.com/comdex - Comdex (Testnet)  
 
 ## Documentation
 
