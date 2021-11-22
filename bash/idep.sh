@@ -38,6 +38,6 @@ sudo rm -fv ${OLD_SNAP} &>>${LOG_PATH}
 log_this "Moving new snapshot to ${SNAP_PATH}"
 sudo mv ${HOME}/${CHAIN_ID}*tar ${SNAP_PATH} &>>${LOG_PATH}
 
-du -hs ${SNAP_PATH} | sudo tee -a ${LOG_PATH}
+du -sh ${SNAP_PATH}${SNAP_NAME} | sudo tee -a ${LOG_PATH}
 
 log_this "Done\n---------------------------\n"
