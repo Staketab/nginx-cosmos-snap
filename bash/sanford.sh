@@ -4,7 +4,7 @@ SNAP_PATH="$HOME/nginx/cosmos-snapshots/idep/"
 LOG_PATH="$HOME/nginx/cosmos-snapshots/idep/idep-sanford_log.txt"
 DATA_PATH="$HOME/.ions/data/"
 SERVICE_NAME="ionds.service"
-RPC_ADDRESS="http://127.0.0.1:36657"
+RPC_ADDRESS="http://127.0.0.1:56857"
 SNAP_NAME=$(echo "${CHAIN_ID}_$(date '+%Y-%m-%d').tar")
 OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 
