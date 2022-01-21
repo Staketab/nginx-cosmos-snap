@@ -11,7 +11,16 @@ mkdir -p ~/.starsd/data; \
 cd ~/.starsd/data
 ```
 
-Download snapshot  
+Download snapshot through `aria2c`  
+```bash
+SNAP_LINK="http://cosmos-snap.staketab.com/stargaze/"
+SNAP_NAME=$(curl -s ${SNAP_LINK} | egrep -o ">stargaze-1.*tar" | tr -d ">")
+aria2c -x2 ${SNAP_LINK}${SNAP_NAME}
+tar -xf ${SNAP_NAME}
+rm -rf ${SNAP_NAME}
+```
+
+Download snapshot through `wget`  
 ```bash
 SNAP_NAME=$(curl -s http://cosmos-snap.staketab.com/stargaze/ | egrep -o ">stargaze-1.*tar" | tr -d ">"); \
 wget -O - http://cosmos-snap.staketab.com/stargaze/${SNAP_NAME} | tar xf -

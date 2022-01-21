@@ -9,7 +9,16 @@ mkdir -p ~/.ixod/data; \
 cd ~/.ixod/data
 ```
 
-Download snapshot  
+Download snapshot through `aria2c`  
+```bash
+SNAP_LINK="http://cosmos-snap.staketab.com/ixo/"
+SNAP_NAME=$(curl -s ${SNAP_LINK} | egrep -o ">impacthub-3.*tar" | tr -d ">")
+aria2c -x2 ${SNAP_LINK}${SNAP_NAME}
+tar -xf ${SNAP_NAME}
+rm -rf ${SNAP_NAME}
+```
+
+Download snapshot through `wget`  
 ```bash
 SNAP_NAME=$(curl -s http://cosmos-snap.staketab.com/ixo/ | egrep -o ">impacthub-3.*tar" | tr -d ">"); \
 wget -O - http://cosmos-snap.staketab.com/ixo/${SNAP_NAME} | tar xf -

@@ -11,7 +11,16 @@ mkdir -p ~/.comdex/data; \
 cd ~/.comdex/data
 ```
 
-Download snapshot  
+Download snapshot through `aria2c`  
+```bash
+SNAP_LINK="http://cosmos-snap.staketab.com/comdex/"
+SNAP_NAME=$(curl -s ${SNAP_LINK} | egrep -o ">comdex-1.*tar" | tr -d ">")
+aria2c -x2 ${SNAP_LINK}${SNAP_NAME}
+tar -xf ${SNAP_NAME}
+rm -rf ${SNAP_NAME}
+```
+
+Download snapshot through `wget`  
 ```bash
 SNAP_NAME=$(curl -s http://cosmos-snap.staketab.com/comdex/ | egrep -o ">comets-test.*tar" | tr -d ">"); \
 wget -O - http://cosmos-snap.staketab.com/comdex/${SNAP_NAME} | tar xf -
