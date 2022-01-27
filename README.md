@@ -5,15 +5,15 @@ Updated once a day.
 
 ## Snapshot List
 
-http://cosmos-snap.staketab.com/ - Main page os snapshots.  
+https://cosmos-snap.staketab.com/ - Main page os snapshots.  
 
 ### - MAINNET
-http://cosmos-snap.staketab.com/axelar - Axelar (Mainnet)  
-http://cosmos-snap.staketab.com/ixo - IXO (Mainnet)  
-http://cosmos-snap.staketab.com/medibloc - Medibloc (Mainnet)  
-http://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
-http://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
-http://cosmos-snap.staketab.com/comdex - Comdex (Mainnet)  
+https://cosmos-snap.staketab.com/axelar - Axelar (Mainnet)  
+https://cosmos-snap.staketab.com/ixo - IXO (Mainnet)  
+https://cosmos-snap.staketab.com/medibloc - Medibloc (Mainnet)  
+https://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
+https://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
+https://cosmos-snap.staketab.com/comdex - Comdex (Mainnet)  
 https://mercury-nodes.net/kichain-snaps/ - Kichain (Mainnet)  
 
 ### - TESTNET
