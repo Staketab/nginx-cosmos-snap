@@ -10,14 +10,14 @@ https://cosmos-snap.staketab.com/ - Main page os snapshots.
 ### - MAINNET
 https://cosmos-snap.staketab.com/axelar - Axelar (Mainnet)  
 https://cosmos-snap.staketab.com/ixo - IXO (Mainnet)  
-https://cosmos-snap.staketab.com/medibloc - Medibloc (Mainnet)  
 https://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
 https://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
 https://cosmos-snap.staketab.com/comdex - Comdex (Mainnet)  
 https://mercury-nodes.net/kichain-snaps/ - Kichain (Mainnet)  
 
 ### - TESTNET
-http://cosmos-snap.staketab.com/idep - Idep (Sanford)  
+https://cosmos-snap.staketab.com/axelar - Axelar (Testnet)  
+https://cosmos-snap.staketab.com/idep - Idep (Sanford Testnet)  
 
 ## Documentation
 
