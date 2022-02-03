@@ -13,6 +13,7 @@ https://cosmos-snap.staketab.com/ixo - IXO (Mainnet)
 https://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
 https://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
 https://cosmos-snap.staketab.com/comdex - Comdex (Mainnet)  
+https://cosmos-snap.staketab.com/osmosis - Osmosis (Mainnet)  
 https://mercury-nodes.net/kichain-snaps/ - Kichain (Mainnet)  
 
 ### - TESTNET
