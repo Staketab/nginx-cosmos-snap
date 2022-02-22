@@ -23,7 +23,7 @@ rm -rf ${SNAP_NAME}
 Download snapshot through `wget`  
 ```bash
 SNAP_NAME=$(curl -s https://cosmos-snap.staketab.com/axelar/ | egrep -o ">axelar-dojo-1.*tar" | tr -d ">"); \
-wget -O - https://cosmos-snap.staketab.com/comdex/${SNAP_NAME} | tar xf -
+wget -O - https://cosmos-snap.staketab.com/axelar/${SNAP_NAME} | tar xf -
 ```
 
 Start service and check logs  
