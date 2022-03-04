@@ -16,6 +16,7 @@ https://cosmos-snap.staketab.com/comdex - Comdex (Mainnet)
 https://cosmos-snap.staketab.com/osmosis - Osmosis (Mainnet)  
 https://cosmos-snap.staketab.com/umee - Umee (Mainnet)  
 https://cosmos-snap.staketab.com/omniflix - Omniflix (Mainnet)  
+https://cosmos-snap.staketab.com/evmos - Evmos (Mainnet)  
 
 ### - TESTNET
 https://cosmos-snap.staketab.com/axelar - Axelar (Testnet)  
@@ -32,5 +33,6 @@ How to download:
 [Umee snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/umee.md)  
 [Comdex snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/comdex.md)  
 [Omniflix snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/omniflix.md)  
+[Evmos snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/evmos.md)  
 
 ## DONE
