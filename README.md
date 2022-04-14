@@ -12,11 +12,11 @@ https://cosmos-snap.staketab.com/axelar - Axelar (Mainnet)
 https://cosmos-snap.staketab.com/ixo - IXO (Mainnet)  
 https://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
 https://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
-https://cosmos-snap.staketab.com/comdex - Comdex (Mainnet)  
 https://cosmos-snap.staketab.com/osmosis - Osmosis (Mainnet)  
 https://cosmos-snap.staketab.com/umee - Umee (Mainnet)  
 https://cosmos-snap.staketab.com/omniflix - Omniflix (Mainnet)  
 https://cosmos-snap.staketab.com/evmos - Evmos (Mainnet)  
+https://cosmos-snap.staketab.com/gravity-bridge/ - Gravity-Bridge (Mainnet) 
 
 ### - TESTNET
 https://cosmos-snap.staketab.com/axelar - Axelar (Testnet)  
@@ -34,5 +34,6 @@ How to download:
 [Comdex snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/comdex.md)  
 [Omniflix snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/omniflix.md)  
 [Evmos snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/evmos.md)  
+[Gravity-Bridge snapshot instruction](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/gravity-bridge.md)  
 
 ## DONE
