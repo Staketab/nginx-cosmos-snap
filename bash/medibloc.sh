@@ -1,15 +1,25 @@
 #!/bin/bash
 CHAIN_ID="panacea-3"
-SNAP_PATH="$HOME/nginx/cosmos-snapshots/medibloc/"
-LOG_PATH="$HOME/nginx/cosmos-snapshots/medibloc/medibloc_log.txt"
+FOLDER="medibloc"
+SNAP_PATH="$HOME/nginx/cosmos-snapshots/${FOLDER}/"
+LOG_PATH="$HOME/nginx/cosmos-snapshots/${FOLDER}/${CHAIN_ID}_log.txt"
 DATA_PATH="$HOME/.panacea/data/"
 SERVICE_NAME="panacead.service"
 RPC_ADDRESS="http://127.0.0.1:26657"
-SNAP_NAME=$(echo "${CHAIN_ID}_$(date '+%Y-%m-%d').tar")
+SNAP_DATE=$(date '+%Y-%m-%d')
+SNAP_NAME=$(echo "${CHAIN_ID}_${SNAP_DATE}.tar")
 OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
+DOMAIN="https://cosmos-snap.staketab.com/${FOLDER}/"
+NOW_DATE=$(date +%F-%H-%M-%S)
+WASM_PATH="$HOME/.panacea/wasm/"
+if [ -e ${WASM_PATH} ]; then
+    WASM_SNAP_NAME=$(echo "wasm_${CHAIN_ID}_${SNAP_DATE}.tar")
+    OLD_WASM_SNAP=$(ls ${SNAP_PATH} | egrep -o "wasm_${CHAIN_ID}.*tar")
+    WASM_LINK="${DOMAIN}${WASM_SNAP_NAME}"
+fi
 
 now_date() {
-    echo -n $(date +%F-%H-%M-%S)
+    echo -n ${NOW_DATE}
 }
 
 log_this() {
@@ -28,6 +38,11 @@ sudo systemctl stop ${SERVICE_NAME}; echo $? >> ${LOG_PATH}
 log_this "Creating new snapshot"
 time sudo tar cf ${HOME}/${SNAP_NAME} -C ${DATA_PATH} . &>>${LOG_PATH}
 
+if [ -e ${WASM_PATH} ]; then
+  log_this "Creating new wasm snapshot"
+  time sudo tar cf ${HOME}/${WASM_SNAP_NAME} -C ${WASM_PATH} . &>>${LOG_PATH}
+fi
+
 log_this "Starting ${SERVICE_NAME}"
 sudo systemctl start ${SERVICE_NAME}; echo $? >> ${LOG_PATH}
 
@@ -35,9 +50,38 @@ log_this "Removing old snapshot(s):"
 cd ${SNAP_PATH}
 sudo rm -fv ${OLD_SNAP} &>>${LOG_PATH}
 
+if [ -e ${WASM_PATH} ]; then
+    log_this "Removing old wasm snapshot(s):"
+    cd ${SNAP_PATH}
+    sudo rm -fv ${OLD_WASM_SNAP} &>>${LOG_PATH}
+fi
+
 log_this "Moving new snapshot to ${SNAP_PATH}"
 sudo mv ${HOME}/${CHAIN_ID}*tar ${SNAP_PATH} &>>${LOG_PATH}
 
-du -hs ${SNAP_PATH} | sudo tee -a ${LOG_PATH}
+if [ -e ${WASM_PATH} ]; then
+    log_this "Moving new wasm snapshot to ${SNAP_PATH}"
+    sudo mv ${HOME}/wasm_${CHAIN_ID}_*tar ${SNAP_PATH} &>>${LOG_PATH}
+fi
+
+SIZE="$(wc -c ${SNAP_PATH}${SNAP_NAME} | awk '{print $1}')"
+log_this "Snapshot size is: ${SIZE}"
+
+if [ -e ${WASM_PATH} ]; then
+    WASM_SIZE="$(wc -c ${SNAP_PATH}${WASM_SNAP_NAME} | awk '{print $1}')"
+    log_this "Wasm snapshot size is: ${WASM_SIZE}"
+fi
+#du -sh  ${SNAP_PATH}${SNAP_NAME} | sudo tee -a ${LOG_PATH}
 
 log_this "Done\n---------------------------\n"
+
+echo "{
+    \"last_height\": \"${LAST_BLOCK_HEIGHT}\",
+    \"date\": \"${NOW_DATE}\",
+    \"snap_filename\": \"${SNAP_NAME}\",
+    \"snap_link\": \"${DOMAIN}${SNAP_NAME}\",
+    \"snap_size\": \"${SIZE}\",
+    \"wasm_filename\": \"${WASM_SNAP_NAME}\",
+    \"wasm_link\": \"${WASM_LINK}\",
+    \"wasm_size\": \"${WASM_SIZE}\"
+}" >${SNAP_PATH}state.json

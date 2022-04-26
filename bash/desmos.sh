@@ -1,17 +1,17 @@
 #!/bin/bash
-CHAIN_ID="axelar-testnet-lisbon-3"
-FOLDER="axelar-testnet"
+CHAIN_ID="desmos-mainnet"
+FOLDER="desmos"
 SNAP_PATH="$HOME/nginx/cosmos-snapshots/${FOLDER}/"
 LOG_PATH="$HOME/nginx/cosmos-snapshots/${FOLDER}/${CHAIN_ID}_log.txt"
-DATA_PATH="$HOME/.axelar-test/data/"
-SERVICE_NAME="axelard-t.service"
-RPC_ADDRESS="http://127.0.0.1:26657"
+DATA_PATH="$HOME/.desmos/data/"
+SERVICE_NAME="desmos.service"
+RPC_ADDRESS="http://127.0.0.1:36657"
 SNAP_DATE=$(date '+%Y-%m-%d')
 SNAP_NAME=$(echo "${CHAIN_ID}_${SNAP_DATE}.tar")
 OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 DOMAIN="https://cosmos-snap.staketab.com/${FOLDER}/"
 NOW_DATE=$(date +%F-%H-%M-%S)
-WASM_PATH="$HOME/.axelar-test/wasm/"
+WASM_PATH="$HOME/.desmos/wasm/"
 if [ -e ${WASM_PATH} ]; then
     WASM_SNAP_NAME=$(echo "wasm_${CHAIN_ID}_${SNAP_DATE}.tar")
     OLD_WASM_SNAP=$(ls ${SNAP_PATH} | egrep -o "wasm_${CHAIN_ID}.*tar")
