@@ -11,6 +11,7 @@ SNAP_NAME=$(echo "${CHAIN_ID}_${SNAP_DATE}.tar")
 OLD_SNAP=$(ls ${SNAP_PATH} | egrep -o "${CHAIN_ID}.*tar")
 DOMAIN="https://cosmos-snap.staketab.com/${FOLDER}/"
 NOW_DATE=$(date +%F-%H-%M-%S)
+JSON_DATE=$(date +%D,%T,%Z -u)
 WASM_PATH="$HOME/.desmos/wasm/"
 if [ -e ${WASM_PATH} ]; then
     WASM_SNAP_NAME=$(echo "wasm_${CHAIN_ID}_${SNAP_DATE}.tar")
@@ -77,7 +78,7 @@ log_this "Done\n---------------------------\n"
 
 echo "{
     \"last_height\": \"${LAST_BLOCK_HEIGHT}\",
-    \"date\": \"${NOW_DATE}\",
+    \"date\": \"${JSON_DATE}\",
     \"snap_filename\": \"${SNAP_NAME}\",
     \"snap_link\": \"${DOMAIN}${SNAP_NAME}\",
     \"snap_size\": \"${SIZE}\",
