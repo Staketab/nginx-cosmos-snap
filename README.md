@@ -5,21 +5,21 @@ Updated once a day.
 
 ## Snapshot List
 
-https://cosmos-snap.staketab.com/ - Main page os snapshots.  
+https://services.staketab.com/ - Main page os snapshots.  
 
 ### - MAINNET
-https://cosmos-snap.staketab.com/axelar - Axelar (Mainnet)  
-https://cosmos-snap.staketab.com/desmos - Desmos (Mainnet)  
-https://cosmos-snap.staketab.com/stargaze - Stargaze (Mainnet)  
-https://cosmos-snap.staketab.com/sifchain - Sifchain (Betanet)  
-https://cosmos-snap.staketab.com/osmosis - Osmosis (Mainnet)  
-https://cosmos-snap.staketab.com/umee - Umee (Mainnet)  
-https://cosmos-snap.staketab.com/omniflix - Omniflix (Mainnet)  
-https://cosmos-snap.staketab.com/evmos - Evmos (Mainnet)  
-https://cosmos-snap.staketab.com/gravity-bridge/ - Gravity-Bridge (Mainnet) 
+https://services.staketab.com/axelar - Axelar (Mainnet)  
+https://services.staketab.com/desmos - Desmos (Mainnet)  
+https://services.staketab.com/stargaze - Stargaze (Mainnet)  
+https://services.staketab.com/sifchain - Sifchain (Betanet)  
+https://services.staketab.com/osmosis - Osmosis (Mainnet)  
+https://services.staketab.com/umee - Umee (Mainnet)  
+https://services.staketab.com/omniflix - Omniflix (Mainnet)  
+https://services.staketab.com/evmos - Evmos (Mainnet)  
+https://services.staketab.com/gravity-bridge/ - Gravity-Bridge (Mainnet) 
 
 ### - TESTNET
-https://cosmos-snap.staketab.com/axelar-testnet - Axelar (Testnet)  
+https://services.staketab.com/axelar-testnet - Axelar (Testnet)  
 
 ## Documentation
 
